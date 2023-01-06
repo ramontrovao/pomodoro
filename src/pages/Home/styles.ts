@@ -17,6 +17,7 @@ export const HomeContainer = styled.main`
 `
 
 export const FormContainer = styled.div`
+  margin-top: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -51,6 +52,10 @@ const BaseInput = styled.input`
 
 export const TaskInput = styled(BaseInput)`
   flex: 1;
+
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
 `
 
 export const MinutesAmountInput = styled(BaseInput)`
@@ -58,6 +63,7 @@ export const MinutesAmountInput = styled(BaseInput)`
 `
 
 export const CountdownContainer = styled.div`
+  padding: 1rem;
   font-family: 'Roboto Mono', monospace;
   font-size: 10rem;
   line-height: 8rem;
@@ -70,6 +76,15 @@ export const CountdownContainer = styled.div`
     background: ${(props) => props.theme['gray-700']};
     padding: 2rem 1rem;
     border-radius: 8px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: calc(5rem * 0.2);
+    line-height: calc(5rem * 0.2);
+  }
+
+  @media (min-width: 501px) and (max-width: 900px) {
+    font-size: calc(10rem * 0.6);
   }
 `
 

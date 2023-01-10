@@ -7,8 +7,12 @@ export const HistoryContainer = styled.main`
   flex-direction: column;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: ${(props) => props.theme['gray-100']};
+
+    strong {
+      color: ${(props) => props.theme['pink-500']};
+    }
   }
 `
 
